@@ -1,0 +1,193 @@
+/* -- RESET --*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -- VARIABLES --*/
+/* -- MIXINS --*/
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  flex-direction: column;
+  width: 100%;
+  height: 63px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header .logo img {
+  height: 36px;
+}
+header .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: #EAEAEA;
+  color: #353535;
+  font-weight: 500;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+header .location i {
+  margin-right: 10px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  flex-direction: column;
+  padding: 35px 50px 65px 50px;
+  gap: 25px;
+}
+.hero .hero__title {
+  font-weight: bold;
+  text-align: center;
+}
+.hero .hero__text {
+  font-size: medium;
+  font-weight: 300;
+  text-align: center;
+}
+.hero .hero__CTA {
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  color: white;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howto {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.howto .steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.howto .steps .step {
+  display: inline-flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  gap: 25px;
+  font-weight: 500;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.howto .steps .step .fa-solid {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.howto .steps .step .fa-store {
+  color: #9356DC;
+}
+.howto .steps .step .step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -40px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+}
+
+.restaurants {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: #F6F6F6;
+}
+.restaurants .menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants .menus .card {
+  height: 250px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+.restaurants .menus .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants .menus .card .card__content {
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+.restaurants .menus .card .card__content .card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.restaurants .menus .card .card__content .card__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+footer .footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+footer .footer__nav a {
+  font-weight: 500;
+  color: #FFFFFF;
+}/*# sourceMappingURL=style.css.map */
