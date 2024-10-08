@@ -1,4 +1,6 @@
-@import './_global', './header', './footer';
+@import './_anims';
+@import './_header'; 
+@import './_footer';
 
 .hero {
     @include flexCenter();
