@@ -11,6 +11,11 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
 }
 
 /* -- VARIABLES --*/
@@ -92,6 +97,7 @@ header .location i {
   padding-right: 20px;
 }
 .howto .steps .step {
+  position: relative;
   display: inline-flex;
   align-items: center;
   background-color: #F6F6F6;
@@ -103,7 +109,6 @@ header .location i {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .howto .steps .step .fa-solid {
-  position: absolute;
   color: #7E7E7E;
   font-size: 18px;
   padding-left: 10px;
@@ -115,8 +120,8 @@ header .location i {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  left: -40px;
+  position: absolute;
+  left: -12px;
   background-color: #9356DC;
   color: #FFFFFF;
   border-radius: 50%;
@@ -139,22 +144,35 @@ header .location i {
   gap: 18px;
 }
 .restaurants .menus .card {
-  height: 250px;
+  position: relative;
   width: 100%;
+  height: 251px;
   border-radius: 15px;
   background-color: #FFFFFF;
-  box-sizing: border-box;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurants .menus .card .badge {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  margin: 15px;
+  border-radius: 2px;
+  padding: 6px 9px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.restaurants .menus .card .badge p {
+  color: #008766;
+  font-weight: 500;
 }
 .restaurants .menus .card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 70%;
+  height: 174px;
   border-radius: 15px 15px 0px 0px;
 }
 .restaurants .menus .card .card__content {
   display: flex;
-  height: 20%;
   justify-content: space-between;
   padding: 10px 15px;
 }
@@ -165,9 +183,29 @@ header .location i {
 }
 .restaurants .menus .card .card__content .card__heart {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-size: 21px;
+}
+.restaurants .menus .card .card__content .card__heart i {
+  position: absolute;
+  margin-right: 15px;
+}
+.restaurants .menus .card .card__content .card__heart i:first-of-type {
+  opacity: 1;
+}
+.restaurants .menus .card .card__content .card__heart i:last-of-type {
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurants .menus .card .card__content .card__heart:hover i:first-of-type {
+  opacity: 0;
+}
+.restaurants .menus .card .card__content .card__heart:hover i:last-of-type {
+  opacity: 1;
 }
 
 footer {
@@ -190,4 +228,16 @@ footer .footer__nav {
 footer .footer__nav a {
   font-weight: 500;
   color: #FFFFFF;
+  font-size: 16px;
+}
+footer .footer__nav a i {
+  width: 11px;
+  height: 13px;
+  padding-right: 15px;
+}
+footer .footer__nav li:nth-child(3) a {
+  font-weight: 400;
+}
+footer .footer__nav li:nth-child(4) a {
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
