@@ -7,6 +7,7 @@ footer {
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 20px;
+        width: 139px;
     }
     .footer__nav {
         display: flex;
@@ -14,13 +15,14 @@ footer {
         gap: 7px;
         list-style: none;
         a {
+            display: flex;
+            gap: 11px;
             font-weight: 500;
             color: #FFFFFF;
             font-size: 16px;
             i {
                 width: 11px;
                 height: 13px;
-                padding-right: 15px;
             }
         }
         li:nth-child(3) {
@@ -31,6 +33,37 @@ footer {
         li:nth-child(4) {
             a {
                 font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 30px 25px;
+        gap: 16px;
+        h2 {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        .footer__nav {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 7px;
+            li:nth-child(1), li:nth-child(2) {
+                a {
+                    width: 190px
+                }
+            }
+            li:nth-child(3), li:nth-child(4) {
+                a {
+                    width: 130px
+                }
             }
         }
     }

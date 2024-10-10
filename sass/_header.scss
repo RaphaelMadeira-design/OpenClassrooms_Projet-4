@@ -12,6 +12,13 @@ header {
             height: 36px;
         }
     }
+
+    .back {
+        position: absolute;
+        left: 17px;
+        font-size: 30px;
+    }
+
     .location {
         @include flexCenter();
         position: relative;
@@ -23,6 +30,17 @@ header {
         box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
         i {
             margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        .logo {
+            height: 96px;
+        }
+        .location {
+            box-shadow: none;
         }
     }
 }
