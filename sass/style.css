@@ -45,8 +45,7 @@ body {
   text-align: center;
 }
 .hero .hero__CTA {
-  position: relative;
-  z-index: 1;
+  transition: background 300ms ease;
   height: 50px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
@@ -57,22 +56,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-.hero .hero__CTA:hover::after {
-  opacity: 1;
-}
-.hero .hero__CTA::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+.hero .hero__CTA:hover {
+  background: linear-gradient(193deg, #a16be0 -11.44%, #ff93e1 123.93%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  opacity: 0;
-  transition: opacity 300ms ease-out;
 }
 
 .howto {
@@ -313,7 +300,7 @@ footer .footer__nav li:nth-child(4) a {
   font-weight: 400;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   footer {
     display: flex;
     flex-direction: row-reverse;

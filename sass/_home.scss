@@ -14,14 +14,10 @@
         text-align: center;
     }
     .hero__CTA {
+        transition: background 300ms ease;
         @include CTA();
         @include flexCenter();
         &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-        &::after {
             @include CTAhover();
         }
     }
