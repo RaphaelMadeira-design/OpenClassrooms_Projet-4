@@ -119,11 +119,8 @@ main {
                     }
                 }
                 &:hover {
-                    .menu__price {
+                    .menu__price, .menu__check {
                         transform: translateX(-59px);
-                    }
-                    .menu__check {
-                        transform: translateX(-100%);
                     }
                 }
             }

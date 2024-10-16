@@ -358,11 +358,8 @@ main .menu__list .menu .menu__container .menu__check {
 main .menu__list .menu .menu__container .menu__check i {
   color: white;
 }
-main .menu__list .menu .menu__container:hover .menu__price {
+main .menu__list .menu .menu__container:hover .menu__price, main .menu__list .menu .menu__container:hover .menu__check {
   transform: translateX(-59px);
-}
-main .menu__list .menu .menu__container:hover .menu__check {
-  transform: translateX(-100%);
 }
 main .menu__list .hero__CTA {
   margin: 0 auto;
