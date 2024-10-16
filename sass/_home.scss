@@ -2,11 +2,12 @@
     @include flexCenter();
     background-color: $lightGray;
     flex-direction: column;
-    padding: 35px 50px 65px 50px;
+    padding: 35px 25px 65px 25px;
     gap: 25px;
     .hero__title {
         font-weight: 700;
         text-align: center;
+        padding: 0 25px;
     }
     .hero__text {
         font-size: 18px;
@@ -141,7 +142,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
     .hero {
         padding-top: 30px;
         padding-bottom: 30px;

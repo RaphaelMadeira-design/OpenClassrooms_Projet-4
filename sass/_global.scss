@@ -19,6 +19,19 @@ a:visited {
     color: inherit;
 }
 
+h1 {
+    font-weight: 400;
+    font-family: 'Shrikhand', sans-serif;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 500;
+}
+
 /* -- LAYOUT -- */
 
 body {
@@ -30,6 +43,7 @@ body {
 $primaryColor: #9356DC;
 $darkGray : #353535;
 $lightGray : #F6F6F6;
+$lightGreen : #99E2D0;
 
 /* -- MIXINS --*/
 
@@ -41,6 +55,7 @@ $lightGray : #F6F6F6;
 
 @mixin CTA {
     height: 50px;
+    min-width: 186px;
     background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
     border-radius: 25px;
     color: white;

@@ -18,6 +18,19 @@ a:visited {
   color: inherit;
 }
 
+h1 {
+  font-weight: 400;
+  font-family: "Shrikhand", sans-serif;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+h4 {
+  font-weight: 500;
+}
+
 /* -- LAYOUT -- */
 body {
   transition: all 300ms ease-out;
@@ -32,12 +45,13 @@ body {
   justify-content: center;
   background-color: #F6F6F6;
   flex-direction: column;
-  padding: 35px 50px 65px 50px;
+  padding: 35px 25px 65px 25px;
   gap: 25px;
 }
 .hero .hero__title {
   font-weight: 700;
   text-align: center;
+  padding: 0 25px;
 }
 .hero .hero__text {
   font-size: 18px;
@@ -47,6 +61,7 @@ body {
 .hero .hero__CTA {
   transition: background 300ms ease;
   height: 50px;
+  min-width: 186px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
   color: white;
@@ -193,7 +208,7 @@ body {
   opacity: 1;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .hero {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -220,6 +235,179 @@ body {
     gap: 50px 100px;
   }
 }
+main .banner {
+  position: relative;
+}
+main .banner img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+  -o-object-position: center;
+     object-position: center;
+}
+main .menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  margin-top: -50px;
+  background-color: #F6F6F6;
+  border-radius: 30px 30px 0px 0px;
+  padding-bottom: 40px;
+}
+main .menu__list .menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  padding: 30px 20px 0px 20px;
+}
+main .menu__list .menu__title .card__heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+main .menu__list .menu__title .card__heart i {
+  position: absolute;
+  margin-right: 16px;
+}
+main .menu__list .menu__title .card__heart i:first-of-type {
+  opacity: 1;
+}
+main .menu__list .menu__title .card__heart i:last-of-type {
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+main .menu__list .menu__title .card__heart:focus i:first-of-type, main .menu__list .menu__title .card__heart:hover i:first-of-type {
+  opacity: 0;
+}
+main .menu__list .menu__title .card__heart:focus i:last-of-type, main .menu__list .menu__title .card__heart:hover i:last-of-type {
+  opacity: 1;
+}
+main .menu__list .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 13px;
+}
+main .menu__list .menu h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+main .menu__list .menu h3::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  height: 6px;
+}
+main .menu__list .menu .menu__container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+main .menu__list .menu .menu__container .menu__description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 0 15px 15px;
+}
+main .menu__list .menu .menu__container .menu__description h4 {
+  font-size: 18px;
+}
+main .menu__list .menu .menu__container .menu__description p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 300;
+}
+main .menu__list .menu .menu__container .menu__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: 700;
+  color: #353535;
+  font-size: 15px;
+  padding: 15px 15px 15px 0;
+  transition: transform 400ms ease-out;
+}
+main .menu__list .menu .menu__container .menu__check {
+  position: absolute;
+  right: -59px;
+  width: 59px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  transition: transform 400ms ease-out;
+}
+main .menu__list .menu .menu__container .menu__check i {
+  color: white;
+}
+main .menu__list .menu .menu__container:hover .menu__price {
+  transform: translateX(-59px);
+}
+main .menu__list .menu .menu__container:hover .menu__check {
+  transform: translateX(-100%);
+}
+main .menu__list .hero__CTA {
+  margin: 0 auto;
+  transition: background 300ms ease;
+  height: 50px;
+  min-width: 186px;
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  color: white;
+  padding: 0px 20px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .menu__list .hero__CTA:hover {
+  background: linear-gradient(193deg, #a16be0 -11.44%, #ff93e1 123.93%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  main .banner img {
+    height: 500px;
+  }
+  main .menu__list {
+    margin: -50px auto auto auto;
+    width: 40%;
+    padding: 0px 210px 50px 210px;
+  }
+  main .menu__list .menu__title {
+    padding-top: 50px;
+    justify-content: center;
+  }
+  main .menu__list .menu__title .card__heart {
+    margin-left: 24px;
+  }
+  main .menu__list .menu__title .card__heart i {
+    margin: 0;
+  }
+}
 header .logo {
   display: flex;
   align-items: center;
@@ -231,14 +419,14 @@ header .logo {
   height: 63px;
   background-color: white;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-}
-header .logo img {
-  height: 36px;
+  font-size: 30px;
+  font-family: "Shrikhand", sans-serif;
+  cursor: default;
 }
 header .back {
   position: absolute;
   left: 17px;
-  font-size: 30px;
+  font-size: 20px;
 }
 header .location {
   display: flex;
@@ -256,9 +444,10 @@ header .location i {
   margin-right: 10px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   header .logo {
     height: 96px;
+    font-size: 34px;
   }
   header .location {
     box-shadow: none;
@@ -268,7 +457,7 @@ footer {
   background-color: #353535;
   padding: 22px 25px;
 }
-footer h2 {
+footer h1 {
   font-family: "Shrikhand", sans-serif;
   color: #FFFFFF;
   font-size: 18px;
@@ -307,7 +496,7 @@ footer .footer__nav li:nth-child(4) a {
     padding: 30px 25px;
     gap: 16px;
   }
-  footer h2 {
+  footer h1 {
     display: flex;
     align-items: flex-end;
     margin-top: 30px;
