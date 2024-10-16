@@ -41,6 +41,9 @@ body {
 /* -- VARIABLES --*/
 
 $primaryColor: #9356DC;
+$secondaryColor : #FF79DA;
+$primaryHover : lighten(#9356DC, 5%);
+$secondaryHover : lighten(#FF79DA, 5%);
 $darkGray : #353535;
 $lightGray : #F6F6F6;
 $lightGreen : #99E2D0;
@@ -56,17 +59,16 @@ $lightGreen : #99E2D0;
 @mixin CTA {
     height: 50px;
     min-width: 186px;
-    background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
     border-radius: 25px;
     color: white;
     padding: 0px 20px;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+    background: linear-gradient(189deg, $primaryColor, $secondaryColor);
 }
 
 @mixin CTAhover {
-    background: linear-gradient(193deg, lighten(#9356DC, 5%) -11.44%, lighten(#FF79DA, 5%) 123.93%);
     box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.25);
-    border-radius: 25px;
+    background: linear-gradient(189deg, $primaryHover, $secondaryHover);
 }
 
 @mixin sectionStyle {

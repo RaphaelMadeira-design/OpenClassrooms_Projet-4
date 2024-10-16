@@ -116,6 +116,7 @@
                     font-size: 21px;
                     i {
                         position: absolute;
+                        transition: 300ms ease-out;
                         margin-right: 15px;
                         &:first-of-type {
                             opacity: 1;

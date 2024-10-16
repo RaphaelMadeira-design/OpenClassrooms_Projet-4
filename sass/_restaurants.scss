@@ -32,7 +32,8 @@ main {
                 font-size: 21px;
                 i {
                     position: absolute;
-                    margin-right: 16px;
+                    margin-right: 17px;
+                    transition: 300ms ease-out;
                     &:first-of-type {
                         opacity: 1;
                     }
