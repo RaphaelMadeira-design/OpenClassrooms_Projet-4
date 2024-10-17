@@ -50,7 +50,7 @@ body {
     gap: 25px;
     background-color: rgba(255, 255, 255, 0.90);
     animation: slideUp 1.25s forwards;
-    animation-delay: 3s;
+    animation-delay: 2.75s;
     z-index: 10;
     &__ball {
         height: 25px;
@@ -97,11 +97,12 @@ $lightGreen : #99E2D0;
     padding: 0px 20px;
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
     background: linear-gradient(189deg, $primaryColor, $secondaryColor);
+    transition: 300ms;
 }
 
 @mixin CTAhover {
     box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.25);
-    background: linear-gradient(189deg, $primaryHover, $secondaryHover);
+    opacity: 0.8;
 }
 
 @mixin sectionStyle {
@@ -134,5 +135,14 @@ $lightGreen : #99E2D0;
     }
     to {
         transform: translateY(-30px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
     }
 }

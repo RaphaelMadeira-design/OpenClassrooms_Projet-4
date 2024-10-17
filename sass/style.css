@@ -47,7 +47,7 @@ body {
   gap: 25px;
   background-color: rgba(255, 255, 255, 0.9);
   animation: slideUp 1.25s forwards;
-  animation-delay: 3s;
+  animation-delay: 2.75s;
   z-index: 10;
 }
 .loader__ball {
@@ -93,6 +93,14 @@ body {
     transform: translateY(-30px);
   }
 }
+@keyframes slideIn {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
@@ -121,13 +129,14 @@ body {
   padding: 0px 20px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(189deg, #9356DC, #FF79DA);
+  transition: 300ms;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero .hero__CTA:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(189deg, #a16be0, #ff93e1);
+  opacity: 0.8;
 }
 
 .howto {
@@ -352,6 +361,15 @@ main .menu__list .menu {
   flex-direction: column;
   gap: 12px;
   padding: 0 13px;
+  opacity: 0;
+  animation: slideIn 2s ease forwards;
+  animation-delay: 750ms;
+}
+main .menu__list .menu:nth-child(2) {
+  animation-delay: 200ms;
+}
+main .menu__list .menu:nth-child(3) {
+  animation-delay: 500ms;
 }
 main .menu__list .menu h3 {
   text-transform: uppercase;
@@ -428,13 +446,14 @@ main .menu__list .hero__CTA {
   padding: 0px 20px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(189deg, #9356DC, #FF79DA);
+  transition: 300ms;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 main .menu__list .hero__CTA:hover {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(189deg, #a16be0, #ff93e1);
+  opacity: 0.8;
 }
 
 @media (min-width: 1024px) {
