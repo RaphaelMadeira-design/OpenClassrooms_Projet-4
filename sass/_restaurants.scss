@@ -95,34 +95,36 @@ main {
                         font-weight: 300;
                     }
                 }
-                .menu__price {
+                .menu__slide {
                     display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    font-weight: 700;
-                    color: $darkGray;
-                    font-size: 15px;
-                    padding: 15px 15px 15px 0;
-                    transition: transform 400ms ease-out;
-                }
-                .menu__check {
-                    position: absolute;
-                    right: -59px;
-                    width: 59px;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: $lightGreen;
-                    transition: transform 400ms ease-out;
-                    i {
-                        color: white;
+                    transform: translateX(59px);
+                    transition: transform 300ms ease-in-out;
+                    .menu__price {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        padding: 15px 15px 15px 0;
+                        color: $darkGray;
+                        font-weight: 700;
+                        font-size: 15px;
+                    }
+                    .menu__check {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $lightGreen;
+                        width: 59px;
+                        transition: transform 300ms ease-in-out;
+                        i {
+                            color: white;
+                            font-size: 20px;
+                        }
                     }
                 }
                 &:hover {
-                    .menu__price, .menu__check {
-                        transform: translateX(-59px);
-                    }
+                    .menu__slide {
+                        transform: translateX(0px);
+                    }   
                 }
             }
 
@@ -150,8 +152,7 @@ main {
         }
         .menu__list {
             margin: -50px auto auto auto;
-            width: 40%;
-            padding: 0px 210px 50px 210px;
+            padding: 0px 5vw 50px 5vw;
             .menu__title {
                 padding-top: 50px;
                 justify-content: center;
@@ -161,6 +162,9 @@ main {
                         margin: 0;
                     }
                 }
+            }
+            .menu {
+                min-width: 768px;
             }
         }
     }

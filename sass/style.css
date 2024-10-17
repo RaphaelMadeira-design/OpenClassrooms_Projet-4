@@ -36,9 +36,63 @@ body {
   transition: all 300ms ease-out;
 }
 
+/* -- LOADER -- */
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: slideUp 1.25s forwards;
+  animation-delay: 3s;
+  z-index: 10;
+}
+.loader__ball {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  animation: bounce 500ms infinite alternate;
+}
+.loader__ball--1 {
+  background-color: #9356DC;
+}
+.loader__ball--2 {
+  background-color: #99E2D0;
+  animation-delay: 250ms;
+}
+.loader__ball--3 {
+  background-color: #FF79DA;
+  animation-delay: 500ms;
+}
+
 /* -- VARIABLES --*/
 /* -- MIXINS --*/
 /* -- ANIMATIONS -- */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
+}
 .hero {
   display: flex;
   align-items: center;
@@ -335,32 +389,34 @@ main .menu__list .menu .menu__container .menu__description p {
   font-size: 15px;
   font-weight: 300;
 }
-main .menu__list .menu .menu__container .menu__price {
+main .menu__list .menu .menu__container .menu__slide {
+  display: flex;
+  transform: translateX(59px);
+  transition: transform 300ms ease-in-out;
+}
+main .menu__list .menu .menu__container .menu__slide .menu__price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  font-weight: 700;
-  color: #353535;
-  font-size: 15px;
   padding: 15px 15px 15px 0;
-  transition: transform 400ms ease-out;
+  color: #353535;
+  font-weight: 700;
+  font-size: 15px;
 }
-main .menu__list .menu .menu__container .menu__check {
-  position: absolute;
-  right: -59px;
-  width: 59px;
-  height: 100%;
+main .menu__list .menu .menu__container .menu__slide .menu__check {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #99E2D0;
-  transition: transform 400ms ease-out;
+  width: 59px;
+  transition: transform 300ms ease-in-out;
 }
-main .menu__list .menu .menu__container .menu__check i {
+main .menu__list .menu .menu__container .menu__slide .menu__check i {
   color: white;
+  font-size: 20px;
 }
-main .menu__list .menu .menu__container:hover .menu__price, main .menu__list .menu .menu__container:hover .menu__check {
-  transform: translateX(-59px);
+main .menu__list .menu .menu__container:hover .menu__slide {
+  transform: translateX(0px);
 }
 main .menu__list .hero__CTA {
   margin: 0 auto;
@@ -391,8 +447,7 @@ main .menu__list .hero__CTA:hover {
   }
   main .menu__list {
     margin: -50px auto auto auto;
-    width: 40%;
-    padding: 0px 210px 50px 210px;
+    padding: 0px 5vw 50px 5vw;
   }
   main .menu__list .menu__title {
     padding-top: 50px;
@@ -403,6 +458,9 @@ main .menu__list .hero__CTA:hover {
   }
   main .menu__list .menu__title .card__heart i {
     margin: 0;
+  }
+  main .menu__list .menu {
+    min-width: 768px;
   }
 }
 header .logo {
