@@ -105,6 +105,34 @@ $lightGreen : #99E2D0;
     opacity: 0.8;
 }
 
+@mixin heart {
+    i {
+        font-size: 21px;
+        position: absolute;
+        transition: 300ms ease-out;
+        margin-right: 15px;
+        &:first-of-type {
+            opacity: 1;
+        }
+        &:last-of-type {
+            opacity: 0;
+            background: linear-gradient(#FF79DA, #9356DC);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+@mixin heartHover {
+    i:first-of-type {
+        opacity: 0;
+    }
+    i:last-of-type {
+        opacity: 1;
+    }
+}
+
 @mixin sectionStyle {
     padding: 50px 20px;
     display: flex;
@@ -138,9 +166,18 @@ $lightGreen : #99E2D0;
     }
 }
 
-@keyframes slideIn {
+@keyframes slideLeft {
     from {
         transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100px);
     }
     to {
         opacity: 1;

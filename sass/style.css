@@ -93,9 +93,17 @@ body {
     transform: translateY(-30px);
   }
 }
-@keyframes slideIn {
+@keyframes slideLeft {
   from {
     transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
@@ -121,7 +129,6 @@ body {
   text-align: center;
 }
 .hero .hero__CTA {
-  transition: background 300ms ease;
   height: 50px;
   min-width: 186px;
   border-radius: 25px;
@@ -204,14 +211,14 @@ body {
 .restaurants .menus .card {
   position: relative;
   width: 100%;
-  height: 251px;
+  height: 246px;
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .restaurants .menus .card a {
   display: block;
-  height: 251px;
+  height: 246px;
 }
 .restaurants .menus .card .badge {
   position: absolute;
@@ -243,31 +250,34 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.restaurants .menus .card .card__content .card__heart {
+.restaurants .menus .card .card__heart {
+  position: absolute;
+  right: 20px;
+  bottom: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 21px;
 }
-.restaurants .menus .card .card__content .card__heart i {
+.restaurants .menus .card .card__heart i {
+  font-size: 21px;
   position: absolute;
   transition: 300ms ease-out;
   margin-right: 15px;
 }
-.restaurants .menus .card .card__content .card__heart i:first-of-type {
+.restaurants .menus .card .card__heart i:first-of-type {
   opacity: 1;
 }
-.restaurants .menus .card .card__content .card__heart i:last-of-type {
+.restaurants .menus .card .card__heart i:last-of-type {
   opacity: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.restaurants .menus .card .card__content .card__heart:focus i:first-of-type, .restaurants .menus .card .card__content .card__heart:hover i:first-of-type {
+.restaurants .menus .card .card__heart:focus i:first-of-type, .restaurants .menus .card .card__heart:hover i:first-of-type {
   opacity: 0;
 }
-.restaurants .menus .card .card__content .card__heart:focus i:last-of-type, .restaurants .menus .card .card__content .card__heart:hover i:last-of-type {
+.restaurants .menus .card .card__heart:focus i:last-of-type, .restaurants .menus .card .card__heart:hover i:last-of-type {
   opacity: 1;
 }
 
@@ -320,6 +330,12 @@ main .menu__list {
   border-radius: 30px 30px 0px 0px;
   padding-bottom: 40px;
 }
+main .menu__list:nth-child(2) {
+  animation-delay: 200ms;
+}
+main .menu__list:nth-child(3) {
+  animation-delay: 500ms;
+}
 main .menu__list .menu__title {
   display: flex;
   align-items: center;
@@ -333,12 +349,12 @@ main .menu__list .menu__title .card__heart {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 21px;
 }
 main .menu__list .menu__title .card__heart i {
+  font-size: 21px;
   position: absolute;
-  margin-right: 17px;
   transition: 300ms ease-out;
+  margin-right: 15px;
 }
 main .menu__list .menu__title .card__heart i:first-of-type {
   opacity: 1;
@@ -362,14 +378,15 @@ main .menu__list .menu {
   gap: 12px;
   padding: 0 13px;
   opacity: 0;
-  animation: slideIn 2s ease forwards;
-  animation-delay: 750ms;
 }
-main .menu__list .menu:nth-child(2) {
-  animation-delay: 200ms;
+main .menu__list .menu__starter {
+  animation: slideLeft 1s ease 500ms forwards;
 }
-main .menu__list .menu:nth-child(3) {
-  animation-delay: 500ms;
+main .menu__list .menu__main-course {
+  animation: slideRight 1s ease 1s forwards;
+}
+main .menu__list .menu__dessert {
+  animation: slideLeft 1s ease 1.5s forwards;
 }
 main .menu__list .menu h3 {
   text-transform: uppercase;
@@ -383,62 +400,63 @@ main .menu__list .menu h3::after {
   height: 6px;
 }
 main .menu__list .menu .menu__container {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 main .menu__list .menu .menu__container .menu__description {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding: 15px 0 15px 15px;
 }
 main .menu__list .menu .menu__container .menu__description h4 {
-  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .menu__list .menu .menu__container .menu__description p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 300;
 }
 main .menu__list .menu .menu__container .menu__slide {
   display: flex;
-  transform: translateX(59px);
-  transition: transform 300ms ease-in-out;
+  margin-right: -60px;
+  transition: margin-right 300ms ease-in-out;
 }
 main .menu__list .menu .menu__container .menu__slide .menu__price {
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
+  justify-content: flex-end;
   padding: 15px 15px 15px 0;
-  color: #353535;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
+  color: #353535;
 }
 main .menu__list .menu .menu__container .menu__slide .menu__check {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
   background-color: #99E2D0;
-  width: 59px;
-  transition: transform 300ms ease-in-out;
 }
 main .menu__list .menu .menu__container .menu__slide .menu__check i {
-  color: white;
+  color: #FFFFFF;
   font-size: 20px;
 }
 main .menu__list .menu .menu__container:hover .menu__slide {
-  transform: translateX(0px);
+  margin-right: 0px;
 }
 main .menu__list .hero__CTA {
   margin: 0 auto;
-  transition: background 300ms ease;
   height: 50px;
   min-width: 186px;
   border-radius: 25px;
