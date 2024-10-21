@@ -215,6 +215,11 @@ body {
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 300ms ease-out;
+}
+.restaurants .menus .card:hover {
+  transform: scale(1.025);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .restaurants .menus .card a {
   display: block;
@@ -406,6 +411,7 @@ main .menu__list .menu .menu__container {
   justify-content: space-between;
   background-color: #FFFFFF;
   border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 main .menu__list .menu .menu__container .menu__description {
   display: flex;
