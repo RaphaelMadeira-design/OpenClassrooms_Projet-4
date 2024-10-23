@@ -247,7 +247,7 @@ h4 {
 }
 .restaurants .menus .card .card__heart {
   position: absolute;
-  right: 20px;
+  right: 25px;
   bottom: 35px;
   display: flex;
   align-items: center;
@@ -257,7 +257,6 @@ h4 {
   font-size: 21px;
   position: absolute;
   transition: 300ms ease-out;
-  margin-right: 15px;
 }
 .restaurants .menus .card .card__heart i:first-of-type {
   opacity: 1;
@@ -349,7 +348,6 @@ main .menu__list .menu__title .card__heart i {
   font-size: 21px;
   position: absolute;
   transition: 300ms ease-out;
-  margin-right: 15px;
 }
 main .menu__list .menu__title .card__heart i:first-of-type {
   opacity: 1;
