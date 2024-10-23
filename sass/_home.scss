@@ -118,7 +118,7 @@
             }
             .card__heart {
                 position: absolute;
-                right: 20px;
+                right: 25px;
                 bottom: 35px;
                 @include flexCenter();
                 @include heart();
